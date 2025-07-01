@@ -26,9 +26,9 @@ func main(){
 		})
 	})
 
-	api := r.Group("/api/v1")
-    {
+	// api := r.Group("/api/v1")
+    // {
 
-	}
+	// }
 	r.Run(":8080")
 }
