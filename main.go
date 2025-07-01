@@ -24,7 +24,7 @@ func main() {
 	// Group API v1
 	api := r.Group("/api/v1")
 	{
-		api.Any("/data-booking", proxyHandler("http://localhost:9000/data-booking"))
+		api.Any("/data-booking", proxyHandler("https://jogjaborobudur.com/api/v1/data-booking"))
 	}
 
 	// Jalankan di port 8080
