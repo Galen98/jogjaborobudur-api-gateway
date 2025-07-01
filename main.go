@@ -10,19 +10,19 @@ func main(){
 	r := gin.Default()
 
 	// Setup CORS config
-	// r.Use(cors.New(cors.Config{
-	// 	AllowOrigins:     []string{"http://localhost:3000", "https://namadomainmu.com"},
-	// 	AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},
-	// 	AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
-	// 	ExposeHeaders:    []string{"Content-Length"},
-	// 	AllowCredentials: true,
-	// 	MaxAge:           12 * time.Hour,
-	// }))
+	r.Use(cors.New(cors.Config{
+		AllowOrigins:     []string{"https://jogjaborobudur.com", "https://www.jogjaborobudur.com", "https://api.jogjaborobudur.com", "https://www.api.jogjaborobudur.com"},
+		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},
+		AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
+		ExposeHeaders:    []string{"Content-Length"},
+		AllowCredentials: true,
+		MaxAge:           12 * time.Hour,
+	}))
 
 	//get contoh
 	r.GET("/", func(c *gin.Context){
 		c.JSON(200, gin.H{
-			"message":"tes",
+			"message":"teses",
 		})
 	})
 
